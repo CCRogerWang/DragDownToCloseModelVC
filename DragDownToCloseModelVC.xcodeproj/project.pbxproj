@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB07E57A1F9454F90091E07D /* DismissAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB07E5791F9454F90091E07D /* DismissAnimator.swift */; };
 		DB0E5B5E1F90C28A004F282E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0E5B5D1F90C28A004F282E /* AppDelegate.swift */; };
 		DB0E5B651F90C28A004F282E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB0E5B641F90C28A004F282E /* Assets.xcassets */; };
 		DB0E5B681F90C28A004F282E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB0E5B661F90C28A004F282E /* LaunchScreen.storyboard */; };
@@ -14,9 +15,11 @@
 		DB0E5B741F90C82F004F282E /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB0E5B721F90C82F004F282E /* MainViewController.xib */; };
 		DB0E5B771F90C9CC004F282E /* ModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0E5B751F90C9CC004F282E /* ModelViewController.swift */; };
 		DB0E5B781F90C9CC004F282E /* ModelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB0E5B761F90C9CC004F282E /* ModelViewController.xib */; };
+		DB4E03511F94828F00D894F9 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4E03501F94828F00D894F9 /* Interactor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DB07E5791F9454F90091E07D /* DismissAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissAnimator.swift; sourceTree = "<group>"; };
 		DB0E5B5A1F90C28A004F282E /* DragDownToCloseModelVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DragDownToCloseModelVC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB0E5B5D1F90C28A004F282E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB0E5B641F90C28A004F282E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -26,6 +29,7 @@
 		DB0E5B721F90C82F004F282E /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		DB0E5B751F90C9CC004F282E /* ModelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelViewController.swift; sourceTree = "<group>"; };
 		DB0E5B761F90C9CC004F282E /* ModelViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModelViewController.xib; sourceTree = "<group>"; };
+		DB4E03501F94828F00D894F9 /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +43,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB07E5781F9453E00091E07D /* Ohters */ = {
+			isa = PBXGroup;
+			children = (
+				DB0E5B641F90C28A004F282E /* Assets.xcassets */,
+				DB0E5B661F90C28A004F282E /* LaunchScreen.storyboard */,
+			);
+			path = Ohters;
+			sourceTree = "<group>";
+		};
 		DB0E5B511F90C28A004F282E = {
 			isa = PBXGroup;
 			children = (
@@ -58,13 +71,14 @@
 		DB0E5B5C1F90C28A004F282E /* DragDownToCloseModelVC */ = {
 			isa = PBXGroup;
 			children = (
+				DB07E5781F9453E00091E07D /* Ohters */,
 				DB0E5B5D1F90C28A004F282E /* AppDelegate.swift */,
 				DB0E5B711F90C82F004F282E /* MainViewController.swift */,
 				DB0E5B721F90C82F004F282E /* MainViewController.xib */,
 				DB0E5B751F90C9CC004F282E /* ModelViewController.swift */,
 				DB0E5B761F90C9CC004F282E /* ModelViewController.xib */,
-				DB0E5B641F90C28A004F282E /* Assets.xcassets */,
-				DB0E5B661F90C28A004F282E /* LaunchScreen.storyboard */,
+				DB07E5791F9454F90091E07D /* DismissAnimator.swift */,
+				DB4E03501F94828F00D894F9 /* Interactor.swift */,
 				DB0E5B691F90C28A004F282E /* Info.plist */,
 			);
 			path = DragDownToCloseModelVC;
@@ -145,7 +159,9 @@
 			files = (
 				DB0E5B5E1F90C28A004F282E /* AppDelegate.swift in Sources */,
 				DB0E5B731F90C82F004F282E /* MainViewController.swift in Sources */,
+				DB4E03511F94828F00D894F9 /* Interactor.swift in Sources */,
 				DB0E5B771F90C9CC004F282E /* ModelViewController.swift in Sources */,
+				DB07E57A1F9454F90091E07D /* DismissAnimator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
