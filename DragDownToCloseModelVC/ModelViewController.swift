@@ -13,15 +13,22 @@ class ModelViewController: UIViewController {
 
     var panGestureRecongnizer: UIPanGestureRecognizer!
     var interactor: Interactor? = nil
+    // new
+    @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.transitioningDelegate = self
         
-        // 2
+        
         panGestureRecongnizer = UIPanGestureRecognizer(target: self, action: #selector(ModelViewController.handlePanGesture(sender:)))
-        self.view.addGestureRecognizer(panGestureRecongnizer)
+        
+        panGestureRecongnizer.delegate = self
+        
+//        self.view.addGestureRecognizer(panGestureRecongnizer)
+        collectionView.addGestureRecognizer(panGestureRecongnizer)
+        collectionView.register(UICollectionViewCell.classForCoder(), forCellWithReuseIdentifier: "Cell")
     }
 
     override func didReceiveMemoryWarning() {
@@ -76,5 +83,36 @@ extension ModelViewController: UIViewControllerTransitioningDelegate {
             return nil
         }
         return interactor.hasStarted ? interactor : nil
+    }
+}
+
+extension ModelViewController: UICollectionViewDataSource {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 50
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
+        cell.backgroundColor = UIColor.green
+        return cell
+    }
+}
+
+extension ModelViewController: UIGestureRecognizerDelegate {
+    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        // 1
+        let panGesture = gestureRecognizer as! UIPanGestureRecognizer
+        let velocity = panGesture.velocity(in: collectionView)
+        print("velocity.y \(velocity.y)")
+        //2
+        if collectionView.contentOffset.y <= 0 && velocity.y > 0 {
+            return true
+        } else {
+            return false
+        }
     }
 }
